@@ -3,6 +3,7 @@ function printJobHook(inputs, actions) {
   if (!inputs.job.isAnalysisComplete) {
     return;
   }
+  //Webプリントやモビリティ・プリントの場合にメールを送る。
   if (inputs.job.isWebPrintJob || inputs.job.isMobilityPrintJob){
     // 受信者のメールアドレスを取得します
     var emailRecipients = inputs.user.email;
